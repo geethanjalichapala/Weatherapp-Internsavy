@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Weather App</title>
+</head>
+
+<body onload=getLocation()>
+    <div class="main-parent">
+        <div class="weather-data">
+            <section id="weather-nameplate">
+
+                <span style="display: flex; align-items: center;">
+                    <section id="weather-status-img"></section>
+                    <span>
+                        <h1 id="city_name"></h1>
+                        <small id="country_name"></small>
+                    </span>
+                </span>
+                <span style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <div id="currentTime" style="font-size: 28px;"></div>
+
+                    <div id="currentDate"></div>
+                </span>
+
+
+
+            </section>
+
+            <section style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <span id="temp"></span>
+            </section>
+            <section style="display: flex; justify-content: center; padding: 10px;">
+                <span style="margin-left: 5px; margin-right: 5px;" id="humidity"></span>
+                <label style="margin-left: 5px; margin-right: 5px;" id="status"></label>
+                <span style="margin-left: 5px; margin-right: 5px;" id="wind_speed"></span>
+            </section>
+        </div>
+        <section id="search-bar">
+            <button onclick=getLocation() id="currentLocation"></button>
+            <input type="text" placeholder="search city" id="searchtext" />
+            <button onclick=search_city() id="search_btn"></button>
+        </section>
+        <small style="margin-top: 20px;" id="last_updated"></small>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
